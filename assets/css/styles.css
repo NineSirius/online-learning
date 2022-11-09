@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Italic"), local("Roboto-Italic"), url("../fonts/Roboto/Roboto-Italic.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Italic.woff") format("woff"), url("../fonts/Roboto/Roboto-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), local("Roboto-Regular"), url("../fonts/Roboto/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/Roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --base-gradient: linear-gradient(90.08deg, #FE6201 0.05%, #ED4B7C 99.92%);
+  --gray-color: #6D6D6D;
+  --dark-color: #000000;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.btn {
+  background: linear-gradient(90.08deg, #FE6201 0.05%, #ED4B7C 99.92%);
+  box-shadow: 0px 4px 4px rgba(254, 98, 1, 0.3);
+  border-radius: 24px;
+  border: unset;
+  text-decoration: none;
+  padding: 11px 39px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #FFF;
+  transition: 0.2s;
+}
+.btn:hover {
+  filter: brightness(0.5);
+  cursor: pointer;
+}
+
+.header {
+  min-height: 600px;
+  background: url(../img/header-img.png) no-repeat;
+  background-position: 90%;
+  background-size: 40%;
+}
+.header .container-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px 10px;
+}
+.header .container-nav .nav-logo {
+  max-width: 135px;
+}
+.header .container-nav .nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.header .container-nav .nav-link {
+  font-size: 18px;
+  color: var(--gray-color);
+}
+.header .container-nav .nav-link.active {
+  font-weight: 700;
+  color: var(--dark-color);
+}
+.header .container-nav .nav-link.active::before {
+  content: "";
+  padding: 1px 12px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: var(--base-gradient);
+}
+
+/*# sourceMappingURL=styles.css.map */
