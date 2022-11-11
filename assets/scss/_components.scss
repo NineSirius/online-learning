@@ -1,0 +1,113 @@
+.modalbox {
+  position: fixed;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+  background: rgba(#000, 0.5);
+  transition: .2s;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal {
+    max-width: 600px;
+    width: 500px;
+    background: var(--base-gradient); 
+    padding: 30px 20px;
+    border-radius: 10px;
+    z-index: 11;
+    transform: translateY(-300%);
+    transition: .2s;
+    will-change: transform;
+
+    &.active {
+      transform: translateY(0);
+      will-change: transform;
+    }
+
+    &-title {
+      color: var(--light-color);
+      font-size: 1.5rem;
+    }
+
+    .modal-title-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .modal-title {
+        font-size: 1.75rem;
+      }
+
+      .closebtn {
+        color: #FFF;
+        padding: 0 10px;
+        border-radius: 0;
+        transition: 0.3s;
+
+        &:hover {
+          background: #FFF;
+          border-radius: 50%;
+          color: #000;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .modal-content {
+      text-align: center;
+
+      .modal-logo {
+        color: var(--light-color);
+        margin: 10px 0;
+      }
+
+      .auth-form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        &-item {
+          display: flex;
+          flex-basis: 100%;
+        }
+
+        .modal-btn {
+          background: var(--light-color);
+          color: var(--dark-color);
+          align-self: center;
+
+          margin-top: 10px;
+        }
+
+        .modal-link {
+          margin-top: 15px;
+          color: var(--light-color);
+          padding-bottom: 2.5008px;
+          border-bottom: 2px solid #FFF;
+          width: fit-content;
+          align-self: center;
+          transition: .2s;
+
+          &:hover {
+            text-shadow: 2px 2px 1px var(--dark-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+.closebtn {
+  font-size: 2rem;
+}

@@ -8,10 +8,50 @@
   <title>Document</title>
 </head>
 <body>
+  <div class="modalbox modalbox-auth">
+    <div class="modal auth">
+      <article class="modal-title-wrap">
+        <h2 class="modal-title">Авторизация</h2>
+  
+        <span class="closebtn">&#215;</span>
+      </article>
+  
+      <article class="modal-content">
+        <h2 class="logo modal-logo">
+          Online <br>
+          <span class="logo-swap">Learning</span>
+        </h2>
+        <form class="auth-form">
+          <div class="auth-form-item">
+            <label class="input-wrap auth-input-wrap">
+              <span class="input-title">Имя</span>
+              <input type="text" placeholder="Введите имя.." class="input auth-input" maxlength="12">
+            </label>
+          </div>
+          
+          <div class="auth-form-item">
+            <label class="input-wrap auth-input-wrap">
+              <span class="input-title input-title2">Пароль</span>
+              <input type="password" placeholder="Введите пароль.." class="input auth-input auth-input2">
+            </label>
+          </div>
+
+          <button class="btn modal-btn" type="submit">Войти</button>
+          <span>или</span>
+          <a href="#" class="modal-link">Зарегистрироваться</a>
+        </form>
+
+      </article>
+    </div>
+  </div>
+
   <header class="header">
     <div class="container container-nav">
       <a href="#" class="nav-logo">
-        <img src="assets/img/logo.svg" alt="img">
+        <h2 class="logo">
+          Online <br>
+          <span class="logo-swap">Learning</span>
+        </h2>
       </a>
       <nav class="nav">
         <a href="#" class="nav-link active">Главная</a>
@@ -28,8 +68,127 @@
         </button>
       </div>
     </div>
+
+    <div class="header-content container">
+      <h1 class="title header-title">Watch daily <br> Live Classes</h1>
+
+      <p class="desc header-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
+        purus sit amet luctus venenatis, lectus magna fringilla</p>
+
+      <a href="#" class="btn header-btn">Browse Courses</a>
+    </div>
+
+    <img src="assets/img/grid-item.png" alt="grid-image" class="grid-image header-grid-image">
+    <img src="assets/img/grid-item.png" alt="grid-image" class="grid-image header-grid-image">
   </header>
 
+  <main class="main">
+    <section class="recomended-block container">
+      <h2 class="title recomended-block-title">
+        Рекомендуемые темы <br>
+        для тебя
+      </h2>
+      <div class="recomended-wrap">
+        <a href="#" class="recomended-item">
+          <h2 class="title recomended-item-title">JEE main</h2>
+        </a>
+        <a href="#" class="recomended-item">
+          <h2 class="title recomended-item-title">JEE advance</h2>
+        </a>
+        <a href="#" class="recomended-item">
+          <h2 class="title recomended-item-title">Bank exams</h2>
+        </a>
+        <a href="#" class="recomended-item">
+          <h2 class="title recomended-item-title">NEET</h2>
+        </a>
+      </div>
+    </section>
+
+    <div class="about-block container">
+      <article class="about-title-wrap">
+        <h2 class="title about-title">Learn from the Legends</h2>
+        <p class="desc about-desc"></p>
+      </article>
+
+      <div class="about-cards">
+        <article class="about-card">
+          <h2 class="title about-title">Daily live classes</h2>
+          <p class="desc about-desc">Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit ut
+            aliquam, purus sit amet luctus</p>
+          <a href="#" class="btn about-btn">Start learning</a>
+        </article>
+
+        <article class="about-card">
+          <h2 class="title about-title">Daily live classes</h2>
+          <p class="desc about-desc">Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit ut
+            aliquam, purus sit amet luctus</p>
+          <a href="#" class="btn about-btn">Start learning</a>
+        </article>
+      </div>
+    </div>
+
+    <section class="course-block">
+      <h2 class="title course-title">Курсы</h2>
+
+      <div class="course-item-container container">
+        <div class="course-item-wrap container">
+          <article class="course-item">
+            <h2 class="title course-item-title">Web-Разработчик</h2>
+            <p class="desc course-item-desc">
+              Это специалист, который производит компоновку и стилизует... <button class="modal-front-end">Подробнее</button> <br><br>
+              В данный курс входит:
+            </p>
+  
+            <ul class="course-list">
+              <li class="course-list-item">HTML5, CSS3, JavaScript</li>
+              <li class="course-list-item">Git, SASS и многое другое</li>
+              <li class="course-list-item">Основы Backend</li>
+            </ul>
+  
+            <a href="#" class="btn-arrow course-btn"></a>
+          </article>
+  
+          <article class="course-item">
+            <h2 class="title course-item-title">Game-Dev</h2>
+            <p class="desc course-item-desc">
+              Game-Dev (Разработчик игр). Это специалист, который занимается разработкой игр.<br><br>
+              В данный курс входит:
+            </p>
+  
+            <ul class="course-list">
+              <li class="course-list-item">Языки C# и Java</li>
+              <li class="course-list-item">Графический дизайн</li>
+              <li class="course-list-item">3D - Моделирование</li>
+            </ul>
+  
+            <a href="#" class="btn-arrow course-btn"></a>
+          </article>
+  
+          <article class="course-item">
+            <h2 class="title course-item-title">Сис-Админ</h2>
+            <p class="desc course-item-desc">
+              Специалист отвечающий за ремонт и обслуживание ПК и <button class="modal-sis-admin">Подробнее</button><br><br>
+
+              В данный курс входит: 
+            </p>
+  
+            <ul class="course-list">
+              <li class="course-list-item">Работа с Windows, Linux</li>
+              <li class="course-list-item">Обслуживание ПК</li>
+              <li class="course-list-item">Язык C++</li>
+            </ul>
+  
+            <a href="#" class="btn-arrow course-btn"></a>
+          </article>
+        </div>
+      </divc>
+    </section>
+  </main>
+
+
+  <div class="overlay"></div>
   <script src="assets/js/script.js"></script>
 </body>
 </html>
