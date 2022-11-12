@@ -24,15 +24,15 @@
         <form class="auth-form" target="_blank">
           <div class="auth-form-item">
             <label class="input-wrap auth-input-wrap">
-              <span class="input-title">Телефон, имя пользователя или эл.адрес</span>
-              <input type="text" placeholder="Введите телефон, имя или эл.адрес" class="input auth-input" minlength="4" maxlength="12" required>
+              <span class="input-title show">Логин</span>
+              <input type="text" placeholder="Введите ваш логин" class="input auth-input" minlength="4" maxlength="30" title="Введите ваш номер, имя пользователя или эл.адрес" required>
             </label>
           </div>
           
           <div class="auth-form-item">
             <label class="input-wrap auth-input-wrap">
               <span class="input-title input-title2">Пароль</span>
-              <input type="password" placeholder="Введите пароль.." class="input auth-input auth-input2 " minlength="8" maxlength="30" required >
+              <input type="password" placeholder="Введите пароль.." class="input auth-input auth-input2 " minlength="8" maxlength="30" required title="Введите ваш пароль">
             </label>
           </div>
 
@@ -188,21 +188,22 @@
       </div>
     </section>
 
-    <div class="review-block">
+    <div class="review-block" id="review">
       <section class="review-block-container container">
         <h2 class="title review-title">What our students <br> have to say</h2>
         <div class="arrow-btns">
-          <button class="arrow-btn review-btn"><i class="icon-arrow-left"></i></button>
-          <button class="arrow-btn review-btn"><i class="icon-arrow-right"></i></button>
+          <button class="btn-arrow review-btn"><i class="icon-arrow-left"></i></button>
+          <button class="btn-arrow review-btn"><i class="icon-arrow-right"></i></button>
         </div>
 
         <div class="review-card">
           <img src="assets/img/review-avatar.png" alt="logo" class="review-card-avatar">
 
-          <div class="review-info">
-            <span class="review-info"><i class="icon-quotes-start"></i></span>
+          <div class="review-info" id="review-card">
+            <span class="review-info start"><i class="icon-quotes-start"></i></span>
             <p class="review-content">I work in project management and joined this course because I get great courses for less. The instructors are fantastic, interesting, and helpful. I plan to use this for a long time!</p>
-            <span class="review-info"><i class="icon-quotes-end"></i></span>
+            <span class="review-info end"><i class="icon-quotes-end"></i></span>
+            <h2 class="review-author">-Zulaika</h2>
           </div>
         </div>
       </section>
