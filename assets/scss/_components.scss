@@ -25,13 +25,12 @@
     padding: 30px 20px;
     border-radius: 10px;
     z-index: 11;
-    transform: translateY(-300%);
+    transform: scale(0.1);
     transition: .2s;
     will-change: transform;
 
     &.active {
-      transform: translateY(0);
-      will-change: transform;
+      transform: scale(1);
     }
 
     &-title {
@@ -161,4 +160,7 @@
   background: var(--base-gradient);
   border-radius: 50%;
   padding: 13px;
+
+  border: unset;
+  color: var(--light-color);
 }

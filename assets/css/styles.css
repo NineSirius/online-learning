@@ -284,13 +284,12 @@
   padding: 30px 20px;
   border-radius: 10px;
   z-index: 11;
-  transform: translateY(-300%);
+  transform: scale(0.1);
   transition: 0.2s;
   will-change: transform;
 }
 .modalbox .modal.active {
-  transform: translateY(0);
-  will-change: transform;
+  transform: scale(1);
 }
 .modalbox .modal-title {
   color: var(--light-color);
@@ -400,6 +399,8 @@
   background: var(--base-gradient);
   border-radius: 50%;
   padding: 13px;
+  border: unset;
+  color: var(--light-color);
 }
 
 @font-face {
@@ -960,10 +961,78 @@ li::before {
   border-radius: 0px 12px 0px 0px;
   padding: 55px 0;
 }
-.review-block .review-content {
+.review-block .arrow-btns {
+  position: absolute;
+  top: 240px;
+  left: 250px;
+  display: flex;
+  gap: 25px;
+}
+.review-block .review-card {
+  position: absolute;
+  transform: translateX(50%);
+  top: 60px;
+  max-width: 770px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 28px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.review-block .review-card .review-info .start {
+  margin-bottom: 17px;
+  align-self: flex-start;
+}
+.review-block .review-card .review-info .end {
+  margin-top: 17px;
+  align-self: flex-end;
+}
+.review-block .review-card .review-info {
+  display: flex;
+  flex-direction: column;
+}
+.review-block .review-card .review-content {
   line-height: 18.75px;
   font-style: italic;
   text-align: center;
+}
+.review-block .review-card .review-author {
+  margin-top: 20px;
+  align-self: end;
+  font-size: 16px;
+}
+.review-block .review-card-avatar {
+  position: absolute;
+  top: -60px;
+}
+@media (max-width: 1200px) {
+  .review-block {
+    justify-content: center;
+    text-align: center;
+    background: #F1F3F6;
+  }
+  .review-block .arrow-btns {
+    position: unset;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .review-block .review-card {
+    position: relative;
+    transform: unset;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 992px) {
+  .review-block {
+    margin-top: 1000px;
+  }
+}
+@media (max-width: 768px) {
+  .review-block {
+    margin-top: 1500px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
