@@ -7,6 +7,7 @@ const modalAuthbtn = document.querySelector('.nav-auth-btn');
 const modalAuthbox = document.querySelector('.modalbox-auth');
 const modalAuth = document.querySelector('.modal');
 const closeBtn = document.querySelector('.closebtn');
+const submitbtn = document.querySelector('.modal-btn')
 
 const inputTitle = document.querySelector('.input-title');
 const input = document.querySelector('.auth-input');
@@ -63,6 +64,7 @@ input2.addEventListener('click', function(){
     inputTitle.classList.remove('show');
   }
 })
+
 
 // if(navlinks.addEventListener('click')) {
 //   hamburger.classList.remove('is-active');

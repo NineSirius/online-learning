@@ -55,11 +55,11 @@
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icons/icomoon.eot?v07f6c');
-  src:  url('../fonts/icons/fonts/icomoon.eot?v07f6c#iefix') format('embedded-opentype'),
-    url('../fonts/icons/fonts/icomoon.ttf?v07f6c') format('truetype'),
-    url('../fonts/icons/fonts/icomoon.woff?v07f6c') format('woff'),
-    url('../fonts/icons/fonts/icomoon.svg?v07f6c#icomoon') format('svg');
+  src:  url('../fonts/icons/icomoon.eot');
+  src:  url('../fonts/icons/icomoon.eot') format('embedded-opentype'),
+    url('../fonts/icons/icomoon.ttf') format('truetype'),
+    url('../fonts/icons/icomoon.woff') format('woff'),
+    url('../fonts/icons/icomoon.svg') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -91,14 +91,12 @@
 }
 .icon-arrow-right:before {
   content: "\e903";
-  color: #fff;
 }
 .icon-instagram:before {
   content: "\e904";
 }
 .icon-minus:before {
   content: "\e905";
-  color: #fff;
 }
 .icon-youtube:before {
   content: "\e906";
@@ -108,7 +106,14 @@
 }
 .icon-arrow-left:before {
   content: "\e908";
-  color: #fff;
+}
+.icon-quotes-start:before {
+  content: "\e90a";
+  color: #fe6201;
+}
+.icon-quotes-end:before {
+  content: "\e909";
+  color: #fe6201;
 }
 
 

@@ -179,6 +179,10 @@
         color: #FFF;
       }
 
+      .course-btn {
+        background: var(--light-color);
+      }
+
       &:nth-child(1) {
         background: linear-gradient(34.87deg, #4776E6 1.22%, #8E54E9 97.88%);
         box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
@@ -195,5 +199,29 @@
         border-radius: 24px;
       }
     }
+
+    @include _992px {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .course-card {
+        flex-basis: 50%;
+
+      }
+    }
+  }
+}
+
+.review-block {
+  position: relative;
+  margin-top: 500px;
+  background: linear-gradient(90deg,#F1F3F6 50%, #FFF 50%);
+  border-radius: 0px 12px 0px 0px;
+  padding: 55px 0;
+
+  .review-content {
+    line-height: 18.75px;
+    font-style: italic;
+    text-align: center;
   }
 }
