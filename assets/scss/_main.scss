@@ -218,13 +218,11 @@
   background: linear-gradient(90deg,#F1F3F6 50%, #FFF 50%);
   border-radius: 0px 12px 0px 0px;
   padding: 55px 0;
-
-  
-
+а
   .arrow-btns {
     position: absolute;
     top: 240px;
-    left: 250px;
+    right: 250px;
 
     display: flex;
     gap: 25px;
@@ -287,7 +285,6 @@
       justify-content: center;
       margin: 20px 0;
     }
-
     .review-card {
       position: relative;
       transform: unset;
@@ -301,5 +298,46 @@
 
   @include _768px {
     margin-top: 1500px;
+  }
+}
+
+.teacher-block {
+  position: relative;
+  margin-top: 250px;
+  background: url('../img/teacher-block-bg.jpg') no-repeat;
+  background-size: 100%;
+  text-align: center;
+  justify-content: center;
+  padding: 50px 0 175px;
+
+  .teacher-block-title {
+    color: var(--light-color);
+  }
+
+  .teacher-item-container {
+    top: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    z-index: 1;
+
+    .teacher-item {
+      display: flex;
+      flex-direction: column;
+
+      .teacher-item-image {
+        background: url('../img/teacher-item-bg.svg') no-repeat;
+        background-size: 80%;
+        background-position: center;
+
+        padding: 55px;
+      }
+
+      .teacher-item-title {
+        font-size: 24px;
+        line-height: unset;
+      }
+    }
   }
 }

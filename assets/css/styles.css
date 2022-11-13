@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
@@ -961,10 +962,10 @@ li::before {
   border-radius: 0px 12px 0px 0px;
   padding: 55px 0;
 }
-.review-block .arrow-btns {
+.review-block а .arrow-btns {
   position: absolute;
   top: 240px;
-  left: 250px;
+  right: 250px;
   display: flex;
   gap: 25px;
 }
@@ -1033,6 +1034,41 @@ li::before {
   .review-block {
     margin-top: 1500px;
   }
+}
+
+.teacher-block {
+  position: relative;
+  margin-top: 250px;
+  background: url("../img/teacher-block-bg.jpg") no-repeat;
+  background-size: 100%;
+  text-align: center;
+  justify-content: center;
+  padding: 50px 0 175px;
+}
+.teacher-block .teacher-block-title {
+  color: var(--light-color);
+}
+.teacher-block .teacher-item-container {
+  top: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  z-index: 1;
+}
+.teacher-block .teacher-item-container .teacher-item {
+  display: flex;
+  flex-direction: column;
+}
+.teacher-block .teacher-item-container .teacher-item .teacher-item-image {
+  background: url("../img/teacher-item-bg.svg") no-repeat;
+  background-size: 80%;
+  background-position: center;
+  padding: 55px;
+}
+.teacher-block .teacher-item-container .teacher-item .teacher-item-title {
+  font-size: 24px;
+  line-height: unset;
 }
 
 /*# sourceMappingURL=styles.css.map */
