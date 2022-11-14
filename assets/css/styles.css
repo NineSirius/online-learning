@@ -404,6 +404,10 @@
   color: var(--light-color);
 }
 
+.hide {
+  display: none !important;
+}
+
 @font-face {
   font-family: "Roboto";
   src: local("Roboto Italic"), local("Roboto-Italic"), url("../fonts/Roboto/Roboto-Italic.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Italic.woff") format("woff"), url("../fonts/Roboto/Roboto-Italic.ttf") format("truetype");

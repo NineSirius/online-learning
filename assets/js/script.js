@@ -1,7 +1,6 @@
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('.nav');
 const overlay = document.querySelector('.overlay');
-const navlinks = document.querySelectorAll('.nav-link');
 
 const modalAuthbtn = document.querySelector('.nav-auth-btn');
 const modalAuthbox = document.querySelector('.modalbox-auth');
@@ -14,7 +13,11 @@ const input = document.querySelector('.auth-input');
 const inputTitle2 = document.querySelector('.input-title2');
 const input2 = document.querySelector('.auth-input2');
 
-
+const nextbtn = document.querySelector('.slider-next-btn');
+const prevbtn = document.querySelector('.slider-prev-btn');
+const slider1 = document.querySelector('.slider-item1')
+const slider2 = document.querySelector('.slider-item2')
+const slider3 = document.querySelector('.slider-item3')
 
 hamburger.addEventListener('click', function(){
   hamburger.classList.toggle('is-active');
@@ -67,17 +70,27 @@ input2.addEventListener('click', function(){
 
 
 
-// if(navlinks.addEventListener('click')) {
-//   hamburger.classList.remove('is-active');
-//   nav.classList.remove('is-active');
-//   overlay.classList.remove('is-active');
-//   document.body.classList.remove('noscroll');
-// }
+nextbtn.addEventListener('click', function(){ 
+  if(slider2.classList.contains('hide') && slider3.classList.contains('hide')) {
+    slider2.classList.remove('hide');
+    slider1.classList.add('hide');
+
+  } else if(slider1.classList.contains('hide') && slider3.classList.contains('hide')) {
+    slider2.classList.add('hide')
+    slider3.classList.remove('hide');
+  }
+})
 
 
+prevbtn.addEventListener('click', function(){
+  if(slider1.classList.contains('hide') && slider2.classList.contains('hide')) {
+    slider2.classList.remove('hide');
+    slider3.classList.add('hide');
 
-
-
-
+  } else if(slider1.classList.contains('hide') && slider3.classList.contains('hide')) {
+    slider2.classList.add('hide')
+    slider1.classList.remove('hide');
+  }
+})
 
 
