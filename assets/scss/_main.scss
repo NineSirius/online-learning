@@ -305,7 +305,7 @@
   position: relative;
   margin-top: 250px;
   background: url('../img/teacher-block-bg.jpg') no-repeat;
-  background-size: 100%;
+  background-size: cover;
   text-align: center;
   justify-content: center;
   padding: 50px 0 175px;
@@ -316,9 +316,10 @@
 
   .teacher-item-container {
     top: 50%;
+    width: 100vw;
     position: absolute;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 50px;
     z-index: 1;
 
@@ -337,6 +338,25 @@
       .teacher-item-title {
         font-size: 24px;
         line-height: unset;
+      }
+    }
+  }
+
+  @include _1200px {
+    max-height: 250px;
+    .teacher-item-container {
+      position: unset;   
+      top: unset;
+      left: unset;
+      flex-wrap: wrap;
+      gap: 25px;
+
+      .teacher-item {
+        flex-basis: 40%;
+
+        .teacher-item-image {
+          background-size: contain;
+        }
       }
     }
   }

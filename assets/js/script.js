@@ -66,9 +66,6 @@ input2.addEventListener('click', function(){
 })
 
 
-swipernext = document.getElementById('swiper-next')
-swiperprev = document.getElementById('swiper-prev')
-
 
 // if(navlinks.addEventListener('click')) {
 //   hamburger.classList.remove('is-active');

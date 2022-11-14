@@ -1040,7 +1040,7 @@ li::before {
   position: relative;
   margin-top: 250px;
   background: url("../img/teacher-block-bg.jpg") no-repeat;
-  background-size: 100%;
+  background-size: cover;
   text-align: center;
   justify-content: center;
   padding: 50px 0 175px;
@@ -1050,9 +1050,10 @@ li::before {
 }
 .teacher-block .teacher-item-container {
   top: 50%;
+  width: 100vw;
   position: absolute;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 50px;
   z-index: 1;
 }
@@ -1069,6 +1070,24 @@ li::before {
 .teacher-block .teacher-item-container .teacher-item .teacher-item-title {
   font-size: 24px;
   line-height: unset;
+}
+@media (max-width: 1200px) {
+  .teacher-block {
+    max-height: 250px;
+  }
+  .teacher-block .teacher-item-container {
+    position: unset;
+    top: unset;
+    left: unset;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  .teacher-block .teacher-item-container .teacher-item {
+    flex-basis: 40%;
+  }
+  .teacher-block .teacher-item-container .teacher-item .teacher-item-image {
+    background-size: contain;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
