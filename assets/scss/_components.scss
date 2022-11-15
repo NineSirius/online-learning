@@ -12,6 +12,7 @@
   z-index: 10;
   opacity: 0;
   visibility: hidden;
+  z-index: 13;
   
   &.active {
     opacity: 1;
