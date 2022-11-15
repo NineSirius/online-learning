@@ -1,10 +1,4 @@
-.main {
-  padding: 10px;
 
-  @include _320px {
-    padding: unset;
-  }
-}
 
 .recomended-block {
   display: flex;
@@ -359,6 +353,12 @@
           background-size: contain;
         }
       }
+    }
+  }
+
+  @include _530px {
+    .teacher-item {
+      flex-basis: 100% !important;
     }
   }
 }

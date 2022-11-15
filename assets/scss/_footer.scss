@@ -1,0 +1,53 @@
+.footer {
+  margin-top:200px;
+
+  .newsletter-block {
+    padding: 67px 0;
+    background: var(--base-gradient);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 8px;
+
+    .newsletter-title {
+      color: #FFF;
+      font-size: 32px;
+      line-height: 37.5px;
+    }
+
+    .footer-input-wrap {
+      display: flex;
+      border: 1px solid #FFFFFF;
+      border-radius: 24px;
+
+      .input {
+        padding: 14px 25px;
+        background: none;
+        outline: none;
+        border: none;
+        color: #FFF;
+        font-size: 16px;
+
+        &::placeholder {
+          color: #EBEBEB;
+        }
+      }
+
+      .footer-arrow-btn {
+        background: var(--light-color);
+        color: #000;
+      }
+    }
+  }
+
+  
+
+  @include _1200px {
+    margin-top: 500px;
+  }
+
+  @include _530px {
+    margin-top: 1100px;
+  }
+}

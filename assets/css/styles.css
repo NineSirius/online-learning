@@ -400,8 +400,16 @@
   background: var(--base-gradient);
   border-radius: 50%;
   padding: 13px;
+  transition: 0.3s;
   border: unset;
   color: var(--light-color);
+}
+.btn-arrow:hover {
+  filter: brightness(0.5);
+  cursor: pointer;
+}
+.btn-arrow:active {
+  transform: scale(1.2);
 }
 
 .hide {
@@ -770,15 +778,6 @@ li::before {
     display: none;
   }
 }
-.main {
-  padding: 10px;
-}
-@media (max-width: 320px) {
-  .main {
-    padding: unset;
-  }
-}
-
 .recomended-block {
   display: flex;
   justify-content: space-between;
@@ -1091,6 +1090,59 @@ li::before {
   }
   .teacher-block .teacher-item-container .teacher-item .teacher-item-image {
     background-size: contain;
+  }
+}
+@media (max-width: 530px) {
+  .teacher-block .teacher-item {
+    flex-basis: 100% !important;
+  }
+}
+
+.footer {
+  margin-top: 200px;
+}
+.footer .newsletter-block {
+  padding: 67px 0;
+  background: var(--base-gradient);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-radius: 8px;
+}
+.footer .newsletter-block .newsletter-title {
+  color: #FFF;
+  font-size: 32px;
+  line-height: 37.5px;
+}
+.footer .newsletter-block .footer-input-wrap {
+  display: flex;
+  border: 1px solid #FFFFFF;
+  border-radius: 24px;
+}
+.footer .newsletter-block .footer-input-wrap .input {
+  padding: 14px 25px;
+  background: none;
+  outline: none;
+  border: none;
+  color: #FFF;
+  font-size: 16px;
+}
+.footer .newsletter-block .footer-input-wrap .input::placeholder {
+  color: #EBEBEB;
+}
+.footer .newsletter-block .footer-input-wrap .footer-arrow-btn {
+  background: var(--light-color);
+  color: #000;
+}
+@media (max-width: 1200px) {
+  .footer {
+    margin-top: 500px;
+  }
+}
+@media (max-width: 530px) {
+  .footer {
+    margin-top: 1100px;
   }
 }
 

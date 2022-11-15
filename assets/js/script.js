@@ -78,9 +78,11 @@ nextbtn.addEventListener('click', function(){
   } else if(slider1.classList.contains('hide') && slider3.classList.contains('hide')) {
     slider2.classList.add('hide')
     slider3.classList.remove('hide');
+  } else if(slider1.classList.contains('hide') && slider2.classList.contains('hide')) {
+    slider3.classList.add('hide');
+    slider1.classList.remove('hide');
   }
 })
-
 
 prevbtn.addEventListener('click', function(){
   if(slider1.classList.contains('hide') && slider2.classList.contains('hide')) {
@@ -90,6 +92,10 @@ prevbtn.addEventListener('click', function(){
   } else if(slider1.classList.contains('hide') && slider3.classList.contains('hide')) {
     slider2.classList.add('hide')
     slider1.classList.remove('hide');
+
+  } else if(slider2.classList.contains('hide') && slider3.classList.contains('hide')) {
+    slider1.classList.add('hide');
+    slider3.classList.remove('hide');
   }
 })
 

@@ -160,9 +160,19 @@
   background: var(--base-gradient);
   border-radius: 50%;
   padding: 13px;
+  transition: .3s;
 
   border: unset;
   color: var(--light-color);
+
+  &:hover {
+    filter: brightness(0.5);
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: scale(1.2);
+  }
 }
 
 .hide {
