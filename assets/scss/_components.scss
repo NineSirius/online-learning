@@ -124,11 +124,12 @@
     padding: 10px 20px 10px;
     align-self: flex-start;
     z-index: 1;
-    
-    &.show {
+
+    &:focus {
       transform: translate(20px, 10px);
     }
   }
+
 
   .input {
     padding: 14px 25px;
@@ -176,4 +177,14 @@
 
 .hide {
   display: none !important;
+}
+
+@keyframes target {
+  0% {
+    background: none;
+  }
+
+  100% {
+    background: var;
+  }
 }

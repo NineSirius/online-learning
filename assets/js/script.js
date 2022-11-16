@@ -56,23 +56,23 @@ closeBtn.addEventListener('click', function(){
   modalAuth.classList.remove('active');
 })
 
-input.addEventListener('click', function(){
-  if(inputTitle.classList.contains('show')){
-    inputTitle2.classList.remove('show');
-  } else {
-    inputTitle.classList.toggle('show');
-    inputTitle2.classList.remove('show')
-  }
-})
+// input.addEventListener('click', function(){
+//   if(inputTitle.classList.contains('show')){
+//     inputTitle2.classList.remove('show');
+//   } else {
+//     inputTitle.classList.toggle('show');
+//     inputTitle2.classList.remove('show')
+//   }
+// })
 
-input2.addEventListener('click', function(){
-  if(inputTitle2.classList.contains('show')){
-    inputTitle.classList.remove('show');
-  } else {
-    inputTitle2.classList.toggle('show');
-    inputTitle.classList.remove('show');
-  }
-})
+// input2.addEventListener('click', function(){
+//   if(inputTitle2.classList.contains('show')){
+//     inputTitle.classList.remove('show');
+//   } else {
+//     inputTitle2.classList.toggle('show');
+//     inputTitle.classList.remove('show');
+//   }
+// })
 
 
 

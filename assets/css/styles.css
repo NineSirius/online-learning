@@ -367,7 +367,7 @@
   align-self: flex-start;
   z-index: 1;
 }
-.input-wrap .input-title.show {
+.input-wrap .input-title:focus {
   transform: translate(20px, 10px);
 }
 .input-wrap .input {
@@ -413,6 +413,14 @@
   display: none !important;
 }
 
+@keyframes target {
+  0% {
+    background: none;
+  }
+  100% {
+    background: var;
+  }
+}
 @font-face {
   font-family: "Roboto";
   src: local("Roboto Italic"), local("Roboto-Italic"), url("../fonts/Roboto/Roboto-Italic.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Italic.woff") format("woff"), url("../fonts/Roboto/Roboto-Italic.ttf") format("truetype");
