@@ -316,9 +316,6 @@
   color: #000;
   cursor: pointer;
 }
-.modalbox .modal .modal-content {
-  text-align: center;
-}
 .modalbox .modal .modal-content .modal-logo {
   color: var(--light-color);
   margin: 10px 0;
@@ -329,21 +326,21 @@
   justify-content: center;
   flex-direction: column;
 }
-.modalbox .modal .modal-content .auth-form-item {
+.modalbox .modal .modal-content-item {
   display: flex;
   flex-basis: 100%;
 }
-.modalbox .modal .modal-content .auth-form .modal-btn {
+.modalbox .modal .modal-content .modal-btn {
   background: var(--light-color);
   color: var(--dark-color);
   align-self: center;
   margin-top: 10px;
 }
-.modalbox .modal .modal-content .auth-form .modal-text {
+.modalbox .modal .modal-content .modal-text {
   margin: 10px 0;
   color: var(--light-color);
 }
-.modalbox .modal .modal-content .auth-form .modal-link {
+.modalbox .modal .modal-content .modal-link {
   color: var(--light-color);
   padding-bottom: 2.5008px;
   border-bottom: 2px solid #FFF;
@@ -351,7 +348,7 @@
   align-self: center;
   transition: 0.2s;
 }
-.modalbox .modal .modal-content .auth-form .modal-link:hover {
+.modalbox .modal .modal-content .modal-link:hover {
   text-shadow: 2px 2px 1px var(--dark-color);
 }
 
@@ -784,6 +781,10 @@ li::before {
     display: none;
   }
 }
+.auth .modal-content {
+  text-align: center;
+}
+
 .recomended-block {
   display: flex;
   justify-content: space-between;

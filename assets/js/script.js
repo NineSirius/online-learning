@@ -18,6 +18,12 @@ const prevbtn = document.querySelector('.slider-prev-btn');
 const slider1 = document.querySelector('.slider-item1')
 const slider2 = document.querySelector('.slider-item2')
 const slider3 = document.querySelector('.slider-item3')
+const slider4 = document.querySelector('.slider-item4')
+
+const modalSisAdminbtn = document.querySelector('.modal-sis-admin');
+const modalSisAdminBox = document.querySelector('.modalbox-course3');
+const modalSisAdmin = document.querySelector('.modal-course3');
+const closeBtn2 = document.querySelector('.closebtn-course3')
 
 hamburger.addEventListener('click', function(){
   hamburger.classList.toggle('is-active');
@@ -71,32 +77,59 @@ input2.addEventListener('click', function(){
 
 
 nextbtn.addEventListener('click', function(){ 
-  if(slider2.classList.contains('hide') && slider3.classList.contains('hide')) {
+  if(slider2.classList.contains('hide') && slider3.classList.contains('hide') && slider4.classList.contains('hide') ){
     slider2.classList.remove('hide');
     slider1.classList.add('hide');
 
-  } else if(slider1.classList.contains('hide') && slider3.classList.contains('hide')) {
+  } else if(slider1.classList.contains('hide') && slider3.classList.contains('hide') && slider4.classList.contains('hide')) {
     slider2.classList.add('hide')
     slider3.classList.remove('hide');
-  } else if(slider1.classList.contains('hide') && slider2.classList.contains('hide')) {
+  } else if(slider1.classList.contains('hide') && slider2.classList.contains('hide') && slider4.classList.contains('hide')){
     slider3.classList.add('hide');
+    slider4.classList.remove('hide');
+  } else if(slider1.classList.contains('hide') && slider2.classList.contains('hide') && slider3.classList.contains('hide')){
+    slider4.classList.add('hide');
     slider1.classList.remove('hide');
   }
 })
 
 prevbtn.addEventListener('click', function(){
-  if(slider1.classList.contains('hide') && slider2.classList.contains('hide')) {
-    slider2.classList.remove('hide');
-    slider3.classList.add('hide');
-
-  } else if(slider1.classList.contains('hide') && slider3.classList.contains('hide')) {
-    slider2.classList.add('hide')
-    slider1.classList.remove('hide');
-
-  } else if(slider2.classList.contains('hide') && slider3.classList.contains('hide')) {
-    slider1.classList.add('hide');
+  if(slider3.classList.contains('hide') && slider2.classList.contains('hide') && slider1.classList.contains('hide') ){
     slider3.classList.remove('hide');
+    slider4.classList.add('hide');
+
+  } else if(slider1.classList.contains('hide') && slider2.classList.contains('hide') && slider4.classList.contains('hide')) {
+    slider3.classList.add('hide')
+    slider2.classList.remove('hide');
+  } else if(slider1.classList.contains('hide') && slider3.classList.contains('hide') && slider4.classList.contains('hide')){
+    slider2.classList.add('hide');
+    slider1.classList.remove('hide');
+  } else if(slider2.classList.contains('hide') && slider3.classList.contains('hide') && slider4.classList.contains('hide')){
+    slider1.classList.add('hide');
+    slider4.classList.remove('hide');
   }
 })
+
+modalSisAdminbtn.addEventListener('click', function(){
+  modalSisAdminBox.classList.toggle('active');
+  modalSisAdmin.classList.toggle('active');
+})
+
+modalSisAdminBox.addEventListener('click', function(e){
+  if(e.target.classList.contains('modalbox-course3')) {
+    modalSisAdminBox.classList.remove('active')
+    modalSisAdmin.classList.remove('active');
+  }
+})
+
+closeBtn2.addEventListener('click', function(e){
+    modalSisAdminBox.classList.remove('active')
+    modalSisAdmin.classList.remove('active');
+})
+
+
+
+
+
 
 
