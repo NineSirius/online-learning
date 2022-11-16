@@ -212,11 +212,11 @@
   background: linear-gradient(90deg,#F1F3F6 50%, #FFF 50%);
   border-radius: 0px 12px 0px 0px;
   padding: 55px 0;
-а
+
   .arrow-btns {
     position: absolute;
     top: 240px;
-    right: 250px;
+    left: auto;
 
     display: flex;
     gap: 25px;

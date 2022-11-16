@@ -96,6 +96,11 @@
     .header-title {
       font-size: 3.75rem;
       line-height: 4.375rem;
+
+      @include _530px {
+        font-size: 3rem;
+        line-height: 3.5rem;
+      }
     }
 
     .header-desc {  

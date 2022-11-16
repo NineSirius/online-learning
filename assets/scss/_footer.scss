@@ -1,7 +1,18 @@
 .footer {
-  margin-top:200px;
+  position: relative;
+  margin-top: 300px;
+  background: #F1F3F6;
+
+  .newsletter-block-container {
+    position: relative;
+    padding-top: 150px;
+  }
 
   .newsletter-block {
+    position: absolute;
+    width: 100%;
+    top: -100px;
+    left: auto;
     padding: 67px 0;
     background: var(--base-gradient);
     display: flex;
@@ -37,17 +48,111 @@
       .footer-arrow-btn {
         background: var(--light-color);
         color: #000;
+        padding: 14px;
       }
     }
   }
 
-  
+  .footer-container {
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    
+    .footer-col {
+      max-width: 250px;
+      flex-basis: 25%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .footer-title {
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 28px;
+        color: #000000;
+      }
+
+      .footer-link {
+        color: #7D7D7D;
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+
+        i {
+          color: #000000 !important;
+          font-size: 25px;
+        }
+      }
+
+      .footer-block {
+        display: flex;
+        gap: 25px;
+        font-size: 20px;
+
+        .nav-link {
+          color: #000;
+        }
+      }
+    }
+  }
+
+  .footer-end {
+    background: #FFF;
+    text-align: center;
+    padding: 15px;
+
+    .footer-copyright {
+      color: #333;
+      font-weight: 400;
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+    }
+  }
 
   @include _1200px {
-    margin-top: 500px;
+    margin-top: 600px;
+
+    
+  }
+
+  @include _992px {
+
+    .footer-container {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-col {
+      text-align: center ;
+      max-width: unset !important;
+      flex-basis: 45% !important;
+
+      .footer-link {
+        align-self: center;
+      }
+
+      .footer-block {
+        justify-content: center;
+      }
+    }
   }
 
   @include _530px {
-    margin-top: 1100px;
+    margin-top: 1200px;
+
+    .footer-col {
+      flex-basis: 100% !important;
+      border-bottom: 2px solid #dadada;
+      padding-bottom: 15px;
+    }
+  }
+
+  @media (max-width: 440px) {
+    margin-top: 1250px;
+    
+    .newsletter-block {
+      padding-bottom: 80px;
+    }
   }
 }
