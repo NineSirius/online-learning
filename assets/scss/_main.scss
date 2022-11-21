@@ -177,6 +177,26 @@
         background: var(--light-color);
       }
 
+      .course-btn--blue {
+        color: #8459E9;
+      }
+      .course-btn--green {
+        color: #89A407;
+      }
+      .course-btn--orange {
+        color: #FE6201;
+      }
+
+      .course-more-btn {
+        background: none;
+        border: unset;
+        border-bottom: 2px solid var(--light-color);
+        color: var(--light-color);
+        font-size: 1.125rem;
+
+        cursor: pointer;
+      }
+
       &:nth-child(1) {
         background: linear-gradient(34.87deg, #4776E6 1.22%, #8E54E9 97.88%);
         box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
@@ -231,6 +251,8 @@
     box-shadow: 0px 0px 28px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 60px;
+    opacity: 1;
+    transition: opacity .3s;
 
     display: flex;
     flex-direction: column;

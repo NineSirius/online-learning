@@ -29,6 +29,7 @@
     transform: scale(0.1);
     transition: .2s;
     will-change: transform;
+    overflow-y: auto;
 
     &.active {
       transform: scale(1);
@@ -177,14 +178,5 @@
 
 .hide {
   display: none !important;
-}
-
-@keyframes target {
-  0% {
-    background: none;
-  }
-
-  100% {
-    background: var;
-  }
+  opacity: 0;
 }

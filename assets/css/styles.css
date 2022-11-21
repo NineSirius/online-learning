@@ -288,6 +288,7 @@
   transform: scale(0.1);
   transition: 0.2s;
   will-change: transform;
+  overflow-y: auto;
 }
 .modalbox .modal.active {
   transform: scale(1);
@@ -411,16 +412,9 @@
 
 .hide {
   display: none !important;
+  opacity: 0;
 }
 
-@keyframes target {
-  0% {
-    background: none;
-  }
-  100% {
-    background: var;
-  }
-}
 @font-face {
   font-family: "Roboto";
   src: local("Roboto Italic"), local("Roboto-Italic"), url("../fonts/Roboto/Roboto-Italic.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Italic.woff") format("woff"), url("../fonts/Roboto/Roboto-Italic.ttf") format("truetype");
@@ -948,6 +942,23 @@ li::before {
 .course-block .course-item-wrap .course-item .course-btn {
   background: var(--light-color);
 }
+.course-block .course-item-wrap .course-item .course-btn--blue {
+  color: #8459E9;
+}
+.course-block .course-item-wrap .course-item .course-btn--green {
+  color: #89A407;
+}
+.course-block .course-item-wrap .course-item .course-btn--orange {
+  color: #FE6201;
+}
+.course-block .course-item-wrap .course-item .course-more-btn {
+  background: none;
+  border: unset;
+  border-bottom: 2px solid var(--light-color);
+  color: var(--light-color);
+  font-size: 1.125rem;
+  cursor: pointer;
+}
 .course-block .course-item-wrap .course-item:nth-child(1) {
   background: linear-gradient(34.87deg, #4776E6 1.22%, #8E54E9 97.88%);
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
@@ -996,6 +1007,8 @@ li::before {
   box-shadow: 0px 0px 28px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 60px;
+  opacity: 1;
+  transition: opacity 0.3s;
   display: flex;
   flex-direction: column;
   align-items: center;
