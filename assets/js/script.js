@@ -25,54 +25,92 @@ const modalSisAdminBox = document.querySelector('.modalbox-course3');
 const modalSisAdmin = document.querySelector('.modal-course3');
 const closeBtn2 = document.querySelector('.closebtn-course3')
 
+const modalWebDevBtn = document.querySelector('.modal-front-end');
+const modalcourseBox = document.querySelector('.modalbox-course');
+const modalCourse = document.querySelector('.modal-course');
+const closebtnCourse = document.querySelector('.closebtn-course')
+
+const navLink = document.querySelector('.nav-link');
+const navLink2 = document.querySelector('.nav-link2');
+const navLink3 = document.querySelector('.nav-link3');
+const navLink4 = document.querySelector('.nav-link4');
+
 hamburger.addEventListener('click', function(){
   hamburger.classList.toggle('is-active');
   nav.classList.toggle('is-active');
   overlay.classList.toggle('is-active');
   document.body.classList.toggle('noscroll');
-})
+});
 
 overlay.addEventListener('click', function(){
   hamburger.classList.remove('is-active');
   nav.classList.remove('is-active');
   overlay.classList.remove('is-active');
   document.body.classList.remove('noscroll');
-})
+});
+
+navLink.addEventListener('click', function(){
+  hamburger.classList.remove('is-active');
+  nav.classList.remove('is-active');
+  overlay.classList.remove('is-active');
+  document.body.classList.remove('noscroll');
+});
+navLink2.addEventListener('click', function(){
+  hamburger.classList.remove('is-active');
+  nav.classList.remove('is-active');
+  overlay.classList.remove('is-active');
+  document.body.classList.remove('noscroll');
+});
+
+navLink3.addEventListener('click', function(){
+  hamburger.classList.remove('is-active');
+  nav.classList.remove('is-active');
+  overlay.classList.remove('is-active');
+  document.body.classList.remove('noscroll');
+});
+
+navLink4.addEventListener('click', function(){
+  hamburger.classList.remove('is-active');
+  nav.classList.remove('is-active');
+  overlay.classList.remove('is-active');
+  document.body.classList.remove('noscroll');
+});
 
 modalAuthbtn.addEventListener('click', function(){
   modalAuthbox.classList.toggle('active');
   modalAuth.classList.toggle('active');
-})
+});
 
 modalAuthbox.addEventListener('click', function(e){
   if(e.target.classList.contains('modalbox')) {
     modalAuthbox.classList.remove('active')
     modalAuth.classList.remove('active');
   }
-})
+});
 
 closeBtn.addEventListener('click', function(){
   modalAuthbox.classList.remove('active')
   modalAuth.classList.remove('active');
-})
+});
 
-// input.addEventListener('click', function(){
-//   if(inputTitle.classList.contains('show')){
-//     inputTitle2.classList.remove('show');
-//   } else {
-//     inputTitle.classList.toggle('show');
-//     inputTitle2.classList.remove('show')
-//   }
-// })
 
-// input2.addEventListener('click', function(){
-//   if(inputTitle2.classList.contains('show')){
-//     inputTitle.classList.remove('show');
-//   } else {
-//     inputTitle2.classList.toggle('show');
-//     inputTitle.classList.remove('show');
-//   }
-// })
+input.addEventListener('click', function(){
+  if(inputTitle.classList.contains('show')){
+    inputTitle2.classList.remove('show');
+  } else {
+    inputTitle.classList.toggle('show');
+    inputTitle2.classList.remove('show')
+  }
+});
+
+input2.addEventListener('click', function(){
+  if(inputTitle2.classList.contains('show')){
+    inputTitle.classList.remove('show');
+  } else {
+    inputTitle2.classList.toggle('show');
+    inputTitle.classList.remove('show');
+  }
+});
 
 
 
@@ -125,6 +163,23 @@ modalSisAdminBox.addEventListener('click', function(e){
 closeBtn2.addEventListener('click', function(e){
     modalSisAdminBox.classList.remove('active')
     modalSisAdmin.classList.remove('active');
+})
+
+modalWebDevBtn.addEventListener('click', function(){
+  modalcourseBox.classList.toggle('active');
+  modalCourse.classList.toggle('active');
+})
+
+modalcourseBox.addEventListener('click', function(e){
+  if(e.target.classList.contains('modalbox-course')) {
+    modalcourseBox.classList.remove('active')
+    modalCourse.classList.remove('active');
+  }
+})
+
+closebtnCourse.addEventListener('click', function(e){
+    modalcourseBox.classList.remove('active')
+    modalCourse.classList.remove('active');
 })
 
 

@@ -42,7 +42,7 @@
 
          @include _768px {
           width: 100%;
-          border-bottom: 1px solid var(--gray-color);
+          border-bottom: 1px solid rgb(216, 216, 216);
 
           &.active::before {
             padding: unset;
