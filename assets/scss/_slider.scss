@@ -1,0 +1,10 @@
+.slider {
+  display: flex;
+  max-width: 100vw;
+  overflow: hidden;
+
+  .slide {
+    max-width: 770px;
+    min-width: 770px;
+  }
+}

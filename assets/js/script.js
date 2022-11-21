@@ -13,12 +13,10 @@ const input = document.querySelector('.auth-input');
 const inputTitle2 = document.querySelector('.input-title2');
 const input2 = document.querySelector('.auth-input2');
 
+const slider = document.querySelector('.slider');
+const slide = document.querySelectorAll('.slide')
 const nextbtn = document.querySelector('.slider-next-btn');
 const prevbtn = document.querySelector('.slider-prev-btn');
-const slider1 = document.querySelector('.slider-item1')
-const slider2 = document.querySelector('.slider-item2')
-const slider3 = document.querySelector('.slider-item3')
-const slider4 = document.querySelector('.slider-item4')
 
 const modalSisAdminbtn = document.querySelector('.modal-sis-admin');
 const modalSisAdminBox = document.querySelector('.modalbox-course3');
@@ -127,7 +125,9 @@ closeBtn2.addEventListener('click', function(e){
     modalSisAdmin.classList.remove('active');
 })
 
-
+prevbtn.addEventListener('click', function(){
+  
+})
 
 
 

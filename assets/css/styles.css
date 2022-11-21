@@ -1263,4 +1263,14 @@ li::before {
   }
 }
 
+.slider {
+  display: flex;
+  max-width: 100vw;
+  overflow: hidden;
+}
+.slider .slide {
+  max-width: 770px;
+  min-width: 770px;
+}
+
 /*# sourceMappingURL=styles.css.map */
