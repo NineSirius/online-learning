@@ -35,6 +35,18 @@ const navLink2 = document.querySelector('.nav-link2');
 const navLink3 = document.querySelector('.nav-link3');
 const navLink4 = document.querySelector('.nav-link4');
 
+let x;
+addEventListener('touchstart', e => x = e.changedTouches[0].clientX);
+
+addEventListener('touchend', e => e.changedTouches[0].clientX - x < -50 && swipeLeft());
+
+function swipeLeft() {
+  hamburger.classList.add('is-active');
+  nav.classList.add('is-active');
+  overlay.classList.add('is-active');
+  document.body.classList.add('noscroll');
+}
+
 hamburger.addEventListener('click', function(){
   hamburger.classList.toggle('is-active');
   nav.classList.toggle('is-active');
