@@ -38,7 +38,7 @@ const navLink4 = document.querySelector('.nav-link4');
 let x;
 addEventListener('touchstart', e => x = e.changedTouches[0].clientX);
 
-addEventListener('touchend', e => e.changedTouches[0].clientX - x < -50 && swipeLeft());
+addEventListener('touchend', e => e.changedTouches[0].clientX - x < -200 && swipeLeft());
 
 function swipeLeft() {
   hamburger.classList.add('is-active');
