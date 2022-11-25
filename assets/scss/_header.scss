@@ -15,6 +15,11 @@
   
     .nav-logo {
       max-width: 135px;
+
+      @media (max-width: 350px) {
+        max-width: unset;
+        width: 100% !important;
+      }
     }
   
     .nav {
@@ -75,6 +80,24 @@
     .nav-btns {
       display: flex;
       align-items: center;
+
+      .nav-auth-btn i {
+        font-size: 20px;
+        display: none;
+      }
+
+      @media (max-width: 350px) {
+        .nav-auth-btn {
+          padding: 12px;
+        }
+
+        .nav-auth-info {
+          display: none;
+        }
+        .nav-auth-btn i {
+          display: inline;
+        }
+      }
 
       .hamburger {
         display: none;

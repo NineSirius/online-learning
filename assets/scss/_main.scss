@@ -71,6 +71,8 @@
   align-items: center;
   justify-content: space-between;
 
+  
+
   .about-cards {
     display: flex;
     align-items: center;
@@ -112,6 +114,14 @@
   }
 
   @include _992px {
+    .about-title-wrap {
+      flex-basis: 100%;
+    }
+  
+    .about-title {
+      text-align: center;
+    }
+
     flex-wrap: wrap;
     gap: 40px;
     .about-cards {
