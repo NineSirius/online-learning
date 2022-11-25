@@ -180,3 +180,22 @@
   display: none !important;
   opacity: 0;
 }
+
+.top-btn {
+  position: fixed;
+  right: -50px;
+  bottom: 50px;
+  transition: .3s;
+  background: var(--base-gradient);
+  font-size: 25px;
+  padding: 10px 12px;
+  color: #FFF;
+  border-radius: 50%;
+
+  
+
+  &.active {
+    right: 50px;
+  }
+}
+

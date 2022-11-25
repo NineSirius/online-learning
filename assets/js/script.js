@@ -194,6 +194,18 @@ closebtnCourse.addEventListener('click', function(e){
     modalCourse.classList.remove('active');
 })
 
+const topButton = document.querySelector('.top-btn');
+
+window.addEventListener('scroll', function(){
+  wScroll = this.scrollY;
+
+  if(wScroll >= 500) {
+    topButton.classList.add('active');
+  } else {
+    topButton.classList.remove('active');
+  }
+})  
+
 
 
 

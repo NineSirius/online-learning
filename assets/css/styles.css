@@ -363,6 +363,19 @@
   display: none !important;
   opacity: 0; }
 
+.top-btn {
+  position: fixed;
+  right: -50px;
+  bottom: 50px;
+  transition: .3s;
+  background: var(--base-gradient);
+  font-size: 25px;
+  padding: 10px 12px;
+  color: #FFF;
+  border-radius: 50%; }
+  .top-btn.active {
+    right: 50px; }
+
 @font-face {
   font-family: 'Roboto';
   src: local("Roboto Italic"), local("Roboto-Italic"), url("../fonts/Roboto/Roboto-Italic.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Italic.woff") format("woff"), url("../fonts/Roboto/Roboto-Italic.ttf") format("truetype");
@@ -449,6 +462,9 @@
 
 .icon-user:before {
   content: "\e971"; }
+
+.icon-arrow-up:before {
+  content: "\ea3a"; }
 
 :root {
   --base-gradient: linear-gradient(90.08deg, #FE6201 0.05%, #ED4B7C 99.92%);
