@@ -282,34 +282,45 @@
           border-radius: 50%;
           color: #000;
           cursor: pointer; }
-    .modalbox .modal .modal-content .modal-logo {
-      color: var(--light-color);
-      margin: 10px 0; }
-    .modalbox .modal .modal-content .auth-form {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      flex-direction: column; }
-    .modalbox .modal .modal-content-item {
-      display: flex;
-      flex-basis: 100%; }
-    .modalbox .modal .modal-content .modal-btn {
-      background: var(--light-color);
-      color: var(--dark-color);
-      align-self: center;
-      margin-top: 10px; }
-    .modalbox .modal .modal-content .modal-text {
-      margin: 10px 0;
-      color: var(--light-color); }
-    .modalbox .modal .modal-content .modal-link {
-      color: var(--light-color);
-      padding-bottom: 2.5008px;
-      border-bottom: 2px solid #FFF;
-      width: fit-content;
-      align-self: center;
-      transition: .2s; }
-      .modalbox .modal .modal-content .modal-link:hover {
-        text-shadow: 2px 2px 1px var(--dark-color); }
+    .modalbox .modal .modal-content {
+      max-height: 70vh;
+      overflow-y: auto; }
+      .modalbox .modal .modal-content .modal-logo {
+        color: var(--light-color);
+        margin: 10px 0; }
+      .modalbox .modal .modal-content .course-info {
+        display: flex; }
+        .modalbox .modal .modal-content .course-info .info-item {
+          display: flex; }
+          .modalbox .modal .modal-content .course-info .info-item .info-image {
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+      .modalbox .modal .modal-content .auth-form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column; }
+      .modalbox .modal .modal-content-item {
+        display: flex;
+        flex-basis: 100%; }
+      .modalbox .modal .modal-content .modal-btn {
+        background: var(--light-color);
+        color: var(--dark-color);
+        align-self: center;
+        margin-top: 10px; }
+      .modalbox .modal .modal-content .modal-text {
+        margin: 10px 0;
+        color: var(--light-color); }
+      .modalbox .modal .modal-content .modal-link {
+        color: var(--light-color);
+        padding-bottom: 2.5008px;
+        border-bottom: 2px solid #FFF;
+        width: fit-content;
+        align-self: center;
+        transition: .2s; }
+        .modalbox .modal .modal-content .modal-link:hover {
+          text-shadow: 2px 2px 1px var(--dark-color); }
 
 .input-wrap {
   width: 100%;
@@ -365,16 +376,19 @@
 
 .top-btn {
   position: fixed;
-  right: -50px;
-  bottom: 50px;
+  right: 50px;
+  bottom: -50px;
   transition: .3s;
   background: var(--base-gradient);
+  box-shadow: 0px 0 12px 0px #f00;
+  opacity: 0;
   font-size: 25px;
   padding: 10px 12px;
   color: #FFF;
   border-radius: 50%; }
   .top-btn.active {
-    right: 50px; }
+    opacity: 1;
+    bottom: 50px; }
 
 @font-face {
   font-family: 'Roboto';
@@ -452,19 +466,47 @@
 .icon-arrow-left:before {
   content: "\e908"; }
 
-.icon-quotes-start:before {
-  content: "\e90a";
-  color: #fe6201; }
-
 .icon-quotes-end:before {
-  content: "\e909";
-  color: #fe6201; }
+  content: "\e909"; }
+
+.icon-quotes-start:before {
+  content: "\e90a"; }
+
+.icon-location-solid:before {
+  content: "\e948"; }
+
+.icon-compass2:before {
+  content: "\e94a"; }
+
+.icon-map:before {
+  content: "\e94b"; }
+
+.icon-clock-outline:before {
+  content: "\e94e"; }
+
+.icon-clock-solid:before {
+  content: "\e94f"; }
 
 .icon-user:before {
   content: "\e971"; }
 
 .icon-arrow-up:before {
   content: "\ea3a"; }
+
+.icon-chrome:before {
+  content: "\ead9"; }
+
+.icon-html-five:before {
+  content: "\eae4"; }
+
+.icon-html-five2:before {
+  content: "\eae5"; }
+
+.icon-css3:before {
+  content: "\eae6"; }
+
+.icon-git:before {
+  content: "\eae7"; }
 
 :root {
   --base-gradient: linear-gradient(90.08deg, #FE6201 0.05%, #ED4B7C 99.92%);
@@ -1009,7 +1051,7 @@ li::before {
         color: #000;
         padding: 17px; }
   .footer .footer-container {
-    padding-bottom: 50px;
+    padding: 20px 0 78px 0;
     display: flex;
     justify-content: space-between; }
     .footer .footer-container .footer-col {
