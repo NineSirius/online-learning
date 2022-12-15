@@ -44,6 +44,10 @@
                     }
                 }
 
+                &:hover {
+                    filter: brightness(0.2);
+                }
+
                 @include _768px {
                     width: 100%;
                     border-bottom: 1px solid rgb(216, 216, 216);

@@ -830,6 +830,9 @@ li::before {
   border-radius: 50%;
   background: var(--base-gradient);
 }
+.header .container-nav .nav-link:hover {
+  filter: brightness(0.2);
+}
 @media (max-width: 768px) {
   .header .container-nav .nav-link {
     width: 100%;
