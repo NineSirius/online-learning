@@ -1,198 +1,197 @@
 @font-face {
-  font-family: 'Roboto';
-  src: local('Roboto Italic'), local('Roboto-Italic'),
-      url('../fonts/Roboto/Roboto-Italic.woff2') format('woff2'),
-      url('../fonts/Roboto/Roboto-Italic.woff') format('woff'),
-      url('../fonts/Roboto/Roboto-Italic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
+    font-family: "Roboto";
+    src: local("Roboto Italic"), local("Roboto-Italic"),
+        url("../fonts/Roboto/Roboto-Italic.woff2") format("woff2"),
+        url("../fonts/Roboto/Roboto-Italic.woff") format("woff"),
+        url("../fonts/Roboto/Roboto-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: local('Roboto'), local('Roboto-Regular'),
-      url('../fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
-      url('../fonts/Roboto/Roboto-Regular.woff') format('woff'),
-      url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Roboto";
+    src: local("Roboto"), local("Roboto-Regular"),
+        url("../fonts/Roboto/Roboto-Regular.woff2") format("woff2"),
+        url("../fonts/Roboto/Roboto-Regular.woff") format("woff"),
+        url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: local('Roboto Bold'), local('Roboto-Bold'),
-      url('../fonts/Roboto/Roboto-Bold.woff2') format('woff2'),
-      url('../fonts/Roboto/Roboto-Bold.woff') format('woff'),
-      url('../fonts/Roboto/Roboto-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Roboto";
+    src: local("Roboto Bold"), local("Roboto-Bold"),
+        url("../fonts/Roboto/Roboto-Bold.woff2") format("woff2"),
+        url("../fonts/Roboto/Roboto-Bold.woff") format("woff"),
+        url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Playfair Display';
-  src: local('Playfair Display Bold'), local('PlayfairDisplay-Bold'),
-      url('../fonts/Playfair-Display/PlayfairDisplay-Bold.woff2') format('woff2'),
-      url('../fonts/Playfair-Display/PlayfairDisplay-Bold.woff') format('woff'),
-      url('../fonts/Playfair-Display/PlayfairDisplay-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Playfair Display";
+    src: local("Playfair Display Bold"), local("PlayfairDisplay-Bold"),
+        url("../fonts/Playfair-Display/PlayfairDisplay-Bold.woff2")
+            format("woff2"),
+        url("../fonts/Playfair-Display/PlayfairDisplay-Bold.woff")
+            format("woff"),
+        url("../fonts/Playfair-Display/PlayfairDisplay-Bold.ttf")
+            format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Poppins';
-  src: local('Poppins Black'), local('Poppins-Black'),
-      url('../fonts/Poppins/Poppins-Black.woff2') format('woff2'),
-      url('../fonts/Poppins/Poppins-Black.woff') format('woff'),
-      url('../fonts/Poppins/Poppins-Black.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Poppins";
+    src: local("Poppins Black"), local("Poppins-Black"),
+        url("../fonts/Poppins/Poppins-Black.woff2") format("woff2"),
+        url("../fonts/Poppins/Poppins-Black.woff") format("woff"),
+        url("../fonts/Poppins/Poppins-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'icomoon';
-  src:  url('../fonts/icons/icomoon.eot');
-  src:  url('../fonts/icons/icomoon.eot') format('embedded-opentype'),
-    url('../fonts/icons/icomoon.ttf') format('truetype'),
-    url('../fonts/icons/icomoon.woff') format('woff'),
-    url('../fonts/icons/icomoon.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
+    font-family: "icomoon";
+    src: url("../fonts/icons/icomoon.eot");
+    src: url("../fonts/icons/icomoon.eot") format("embedded-opentype"),
+        url("../fonts/icons/icomoon.ttf") format("truetype"),
+        url("../fonts/icons/icomoon.woff") format("woff"),
+        url("../fonts/icons/icomoon.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'icomoon' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
+[class^="icon-"],
+[class*=" icon-"] {
+    font-family: "icomoon" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-facebook:before {
-  content: "\e900";
+    content: "\e900";
 }
 .icon-envelope:before {
-  content: "\e901";
+    content: "\e901";
 }
 .icon-twitter:before {
-  content: "\e902";
+    content: "\e902";
 }
 .icon-arrow-right:before {
-  content: "\e903";
+    content: "\e903";
 }
 .icon-instagram:before {
-  content: "\e904";
+    content: "\e904";
 }
 .icon-minus:before {
-  content: "\e905";
+    content: "\e905";
 }
 .icon-youtube:before {
-  content: "\e906";
+    content: "\e906";
 }
 .icon-location:before {
-  content: "\e907";
+    content: "\e907";
 }
 .icon-arrow-left:before {
-  content: "\e908";
+    content: "\e908";
 }
 .icon-quotes-end:before {
-  content: "\e909";
+    content: "\e909";
 }
 .icon-quotes-start:before {
-  content: "\e90a";
+    content: "\e90a";
 }
 .icon-location-solid:before {
-  content: "\e948";
+    content: "\e948";
 }
 .icon-compass2:before {
-  content: "\e94a";
+    content: "\e94a";
 }
 .icon-map:before {
-  content: "\e94b";
+    content: "\e94b";
 }
 .icon-clock-outline:before {
-  content: "\e94e";
+    content: "\e94e";
 }
 .icon-clock-solid:before {
-  content: "\e94f";
+    content: "\e94f";
 }
 .icon-user:before {
-  content: "\e971";
+    content: "\e971";
 }
 .icon-arrow-up:before {
-  content: "\ea3a";
+    content: "\ea3a";
 }
 .icon-chrome:before {
-  content: "\ead9";
+    content: "\ead9";
 }
 .icon-html-five:before {
-  content: "\eae4";
+    content: "\eae4";
 }
 .icon-html-five2:before {
-  content: "\eae5";
+    content: "\eae5";
 }
 .icon-css3:before {
-  content: "\eae6";
+    content: "\eae6";
 }
 .icon-git:before {
-  content: "\eae7";
+    content: "\eae7";
 }
 
+:root {
+    --base-gradient: linear-gradient(90.08deg, #fe6201 0.05%, #ed4b7c 99.92%);
+    --input-pl-color: #444;
+    --title-color: #2b283a;
+    --desc-color: #6b6b6b;
 
-
-
-:root  {
-  
-  --base-gradient: linear-gradient(90.08deg, #FE6201 0.05%, #ED4B7C 99.92%);
-  --input-pl-color: #444;
-  --title-color: #2B283A;
-  --desc-color: #6B6B6B;
-
-  --gray-color: #6D6D6D;
-  --dark-color: #000000;
-  --light-color: #FFFFFF;
+    --gray-color: #6d6d6d;
+    --dark-color: #000000;
+    --light-color: #ffffff;
 }
-
 
 @mixin _1400px {
-  @media (max-width:1400px) {
-    @content;
-  }
+    @media (max-width: 1400px) {
+        @content;
+    }
 }
 
 @mixin _1200px {
-  @media (max-width:1200px) {
-    @content;
-  }
+    @media (max-width: 1200px) {
+        @content;
+    }
 }
 @mixin _992px {
-  @media (max-width:992px) {
-    @content;
-  }
+    @media (max-width: 992px) {
+        @content;
+    }
 }
 @mixin _768px {
-  @media (max-width:768px) {
-    @content;
-  }
+    @media (max-width: 768px) {
+        @content;
+    }
 }
 @mixin _530px {
-  @media (max-width:530px) {
-    @content;
-  }
+    @media (max-width: 530px) {
+        @content;
+    }
 }
 @mixin _320px {
-  @media (max-width:320px) {
-    @content;
-  }
+    @media (max-width: 320px) {
+        @content;
+    }
 }

@@ -20,16 +20,6 @@ const slider2 = document.querySelector(".slider-item2");
 const slider3 = document.querySelector(".slider-item3");
 const slider4 = document.querySelector(".slider-item4");
 
-const modalSisAdminbtn = document.querySelector(".modal-sis-admin");
-const modalSisAdminBox = document.querySelector(".modalbox-course3");
-const modalSisAdmin = document.querySelector(".modal-course3");
-const closeBtn2 = document.querySelector(".closebtn-course3");
-
-const modalWebDevBtn = document.querySelector(".modal-front-end");
-const modalcourseBox = document.querySelector(".modalbox-course");
-const modalCourse = document.querySelector(".modal-course");
-const closebtnCourse = document.querySelector(".closebtn-course");
-
 const navLink = document.querySelectorAll(".nav-link");
 // const navLink2 = document.querySelector(".nav-link2");
 // const navLink3 = document.querySelector(".nav-link3");
@@ -43,7 +33,6 @@ addEventListener(
     (e) => e.changedTouches[0].clientX - x < -200 && swipeLeft()
 );
 
-
 function swipeLeft() {
     hamburger.classList.add("is-active");
     nav.classList.add("is-active");
@@ -51,7 +40,6 @@ function swipeLeft() {
     document.body.classList.add("noscroll");
 }
 
-    
 hamburger.addEventListener("click", function () {
     hamburger.classList.toggle("is-active");
     nav.classList.toggle("is-active");
@@ -75,22 +63,6 @@ for (let i = 0; i < navLink.length; i++) {
     });
 }
 
-modalAuthbtn.addEventListener("click", function () {
-    modalAuthbox.classList.toggle("active");
-    modalAuth.classList.toggle("active");
-});
-
-modalAuthbox.addEventListener("click", function (e) {
-    if (e.target.classList.contains("modalbox")) {
-        modalAuthbox.classList.remove("active");
-        modalAuth.classList.remove("active");
-    }
-});
-
-closeBtn.addEventListener("click", function () {
-    modalAuthbox.classList.remove("active");
-    modalAuth.classList.remove("active");
-});
 
 input.addEventListener("click", function () {
     if (inputTitle.classList.contains("show")) {
@@ -172,48 +144,6 @@ prevbtn.addEventListener("click", function () {
         slider1.classList.add("hide");
         slider4.classList.remove("hide");
     }
-    
-});
-
-AudioObj = document.querySelector(".audio");
-if (!slider4.classList.contains("hide")) {
-    AudioObj.play();        
-} else {
-    AudioObj.load();
-}
-
-modalSisAdminbtn.addEventListener("click", function () {
-    modalSisAdminBox.classList.toggle("active");
-    modalSisAdmin.classList.toggle("active");
-});
-
-modalSisAdminBox.addEventListener("click", function (e) {
-    if (e.target.classList.contains("modalbox-course3")) {
-        modalSisAdminBox.classList.remove("active");
-        modalSisAdmin.classList.remove("active");
-    }
-});
-
-closeBtn2.addEventListener("click", function (e) {
-    modalSisAdminBox.classList.remove("active");
-    modalSisAdmin.classList.remove("active");
-});
-
-modalWebDevBtn.addEventListener("click", function () {
-    modalcourseBox.classList.toggle("active");
-    modalCourse.classList.toggle("active");
-});
-
-modalcourseBox.addEventListener("click", function (e) {
-    if (e.target.classList.contains("modalbox-course")) {
-        modalcourseBox.classList.remove("active");
-        modalCourse.classList.remove("active");
-    }
-});
-
-closebtnCourse.addEventListener("click", function (e) {
-    modalcourseBox.classList.remove("active");
-    modalCourse.classList.remove("active");
 });
 
 const topButton = document.querySelector(".top-btn");
@@ -227,3 +157,54 @@ window.addEventListener("scroll", function () {
         topButton.classList.remove("active");
     }
 });
+
+function modalBox(modalBtn, modalBox, modalBlock, modalCloseBtn) {
+    const btn = document.querySelector(modalBtn);
+    const container = document.querySelector(modalBox);
+    const block = document.querySelector(modalBlock);
+    const close = document.querySelector(modalCloseBtn);
+
+    btn.addEventListener("click", function () {
+        container.classList.add("active");
+        block.classList.add("active");
+    });
+    close.addEventListener("click", function () {
+        container.classList.remove("active");
+        block.classList.remove("active");
+    });
+    container.addEventListener("click", function(e) {   
+        if (e.target.classList.contains(modalBox.replace(".", ""))) {
+            container.classList.remove("active");
+            block.classList.remove("active");
+        }
+    });
+}
+
+modalBox(
+    ".modalBtn-course1",
+    ".modalBox-course1",
+    ".modalBlock-course1",
+    ".closeBtn-course1"
+); // 1 модалка
+
+modalBox(
+    ".modalBtn-course2",
+    ".modalBox-course2",
+    ".modalBlock-course2",
+    ".closeBtn-course2"
+) // 2 модалка
+
+modalBox(
+    ".modalBtn-course3",
+    ".modalBox-course3",
+    ".modalBlock-course3",
+    ".closeBtn-course3"
+); // 3 модалка
+
+modalBox(
+    ".modalBtn-auth",
+    ".modalBox-auth",
+    ".modalBlock-auth",
+    ".closeBtn-auth"
+);
+

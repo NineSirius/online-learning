@@ -337,21 +337,26 @@
   font-size: 1.75rem;
 }
 .modalbox .modal .modal-title-wrap .closebtn {
-  color: #FFF;
+  color: #fff;
   padding: 0 10px;
   border-radius: 0;
   transition: 0.3s;
 }
 .modalbox .modal .modal-title-wrap .closebtn:hover {
-  background: #FFF;
+  background: #fff;
   border-radius: 50%;
   color: #000;
   cursor: pointer;
 }
+.modalbox .modal .modal-picture {
+  border-radius: 10px;
+}
 .modalbox .modal .modal-content {
   max-height: 70vh;
   overflow-y: auto;
-  padding-right: 15px;
+  overflow-x: hidden;
+  padding-right: 10px;
+  margin-top: 15px;
 }
 .modalbox .modal .modal-content::-webkit-scrollbar {
   width: 5px;
@@ -372,15 +377,23 @@
 .modalbox .modal .modal-content .course-info .info-item {
   display: flex;
   gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #fff;
 }
 .modalbox .modal .modal-content .course-info .info-item .info-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #FFF;
+  color: #333;
 }
 .modalbox .modal .modal-content .course-info .info-item .info-content {
-  color: #FFF;
+  color: #333;
+}
+@media (max-width: 530px) {
+  .modalbox .modal .modal-content .course-info {
+    flex-direction: column;
+  }
 }
 .modalbox .modal .modal-content .auth-form {
   width: 100%;
@@ -400,18 +413,29 @@
 }
 .modalbox .modal .modal-content .modal-text {
   margin: 10px 0;
+  line-height: 23px;
+  font-size: 18px;
   color: var(--light-color);
 }
 .modalbox .modal .modal-content .modal-link {
   color: var(--light-color);
   padding-bottom: 2.5008px;
-  border-bottom: 2px solid #FFF;
+  border-bottom: 2px solid #fff;
   width: fit-content;
   align-self: center;
   transition: 0.2s;
 }
 .modalbox .modal .modal-content .modal-link:hover {
   text-shadow: 2px 2px 1px var(--dark-color);
+}
+.modalbox .modal .buy-course {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+.modalbox .modal .buy-course .buy-course-btn {
+  background: #FFF;
+  color: #222;
 }
 
 .input-wrap {
@@ -478,7 +502,7 @@
 
 .top-btn {
   position: fixed;
-  right: 50px;
+  right: 5%;
   bottom: -50px;
   transition: 0.3s;
   background: var(--base-gradient);
@@ -486,12 +510,21 @@
   opacity: 0;
   font-size: 25px;
   padding: 10px 12px;
-  color: #FFF;
+  color: #fff;
   border-radius: 50%;
 }
 .top-btn.active {
   opacity: 1;
   bottom: 50px;
+}
+
+.modalBtn {
+  color: #FFF;
+  background: unset;
+  border: unset;
+  text-decoration: underline;
+  font-size: 18px;
+  cursor: pointer;
 }
 
 @font-face {
@@ -537,7 +570,8 @@
   font-style: normal;
   font-display: block;
 }
-[class^=icon-], [class*=" icon-"] {
+[class^=icon-],
+[class*=" icon-"] {
   font-family: "icomoon" !important;
   speak: never;
   font-style: normal;
@@ -643,13 +677,13 @@
 }
 
 :root {
-  --base-gradient: linear-gradient(90.08deg, #FE6201 0.05%, #ED4B7C 99.92%);
+  --base-gradient: linear-gradient(90.08deg, #fe6201 0.05%, #ed4b7c 99.92%);
   --input-pl-color: #444;
-  --title-color: #2B283A;
-  --desc-color: #6B6B6B;
-  --gray-color: #6D6D6D;
+  --title-color: #2b283a;
+  --desc-color: #6b6b6b;
+  --gray-color: #6d6d6d;
   --dark-color: #000000;
-  --light-color: #FFFFFF;
+  --light-color: #ffffff;
 }
 
 *,
@@ -929,7 +963,7 @@ li::before {
     display: none;
   }
 }
-.auth .modal-content {
+.modalBlock-auth .modal-content {
   text-align: center;
 }
 

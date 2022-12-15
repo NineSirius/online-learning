@@ -1,248 +1,276 @@
 .modalbox {
-  position: fixed;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    position: fixed;
 
-  width: 100vw;
-  height: 100vh;
-  background: rgba(#000, 0.5);
-  transition: .2s;
-  z-index: 10;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 13;
-  
-  &.active {
-    opacity: 1;
-    visibility: visible;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-
-
-
-  .modal {
-    max-width: 600px;
-    width: 500px;
-    background: var(--base-gradient); 
-    padding: 30px 30px;
-    border-radius: 10px;
-    z-index: 11;
-    transform: scale(0.1);
-    transition: .2s;
-    will-change: transform;
-    overflow-y: auto;
-
-    img {
-      max-width: 100%;
-      max-height:  300px;
-    }
+    width: 100vw;
+    height: 100vh;
+    background: rgba(#000, 0.5);
+    transition: 0.2s;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 13;
 
     &.active {
-      transform: scale(1);
+        opacity: 1;
+        visibility: visible;
     }
 
-    &-title {
-      color: var(--light-color);
-      font-size: 1.5rem;
-    }
+    .modal {
+        max-width: 600px;
+        width: 500px;
+        background: var(--base-gradient);
+        padding: 30px 30px;
+        border-radius: 10px;
+        z-index: 11;
+        transform: scale(0.1);
+        transition: 0.2s;
+        will-change: transform;
+        overflow-y: auto;
 
-    .modal-title-wrap {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      .modal-title {
-        font-size: 1.75rem;
-      }
-
-      .closebtn {
-        color: #FFF;
-        padding: 0 10px;
-        border-radius: 0;
-        transition: 0.3s;
-
-        &:hover {
-          background: #FFF;
-          border-radius: 50%;
-          color: #000;
-          cursor: pointer;
+        img {
+            max-width: 100%;
+            max-height: 300px;
         }
-      }
-    }
 
-    .modal-content {
-      max-height: 70vh;
-      overflow-y: auto;
-      padding-right: 15px;
+        &.active {
+            transform: scale(1);
+        }
 
-      &::-webkit-scrollbar {
-        width: 5px;
-        background: #333;
-      }
+        &-title {
+            color: var(--light-color);
+            font-size: 1.5rem;
+        }
 
-      &::-webkit-scrollbar-thumb {
-        width: 5px;
-        background: var(--light-color);
-      }
+        .modal-title-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-      .modal-logo {
-        color: var(--light-color);
-        margin: 10px 0;
-      }
+            .modal-title {
+                font-size: 1.75rem;
+            }
 
-      .course-info {
-        display: flex;
-        gap: 15px;
+            .closebtn {
+                color: #fff;
+                padding: 0 10px;
+                border-radius: 0;
+                transition: 0.3s;
 
-        .info-item {
-          display: flex;
-          gap: 10px;
+                &:hover {
+                    background: #fff;
+                    border-radius: 50%;
+                    color: #000;
+                    cursor: pointer;
+                }
+            }
+        }
 
-          .info-icon {
+        .modal-picture {
+            border-radius: 10px;
+        }
+
+        .modal-content {
+            max-height: 70vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding-right: 10px;
+            margin-top: 15px;
+
+            &::-webkit-scrollbar {
+                width: 5px;
+                background: #333;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                width: 5px;
+                background: var(--light-color);
+            }
+
+            .modal-logo {
+                color: var(--light-color);
+                margin: 10px 0;
+            }
+
+            .course-info {
+                display: flex;
+                gap: 15px;
+
+                .info-item {
+                    display: flex;
+                    gap: 10px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    background: #fff;
+
+                    .info-icon {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #333;
+                    }
+
+                    .info-content {
+                        color: #333;
+                    }
+                }
+
+                @media (max-width: 530px) {
+                    flex-direction: column;
+                }
+            }
+
+            .auth-form {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            &-item {
+                display: flex;
+                flex-basis: 100%;
+            }
+
+            .modal-btn {
+                background: var(--light-color);
+                color: var(--dark-color);
+                align-self: center;
+
+                margin-top: 10px;
+            }
+
+            .modal-text {
+                margin: 10px 0;
+                line-height: 23px;
+                font-size: 18px;
+                color: var(--light-color);
+            }
+
+            .modal-link {
+                color: var(--light-color);
+                padding-bottom: 2.5008px;
+                border-bottom: 2px solid #fff;
+                width: fit-content;
+                align-self: center;
+                transition: 0.2s;
+
+                &:hover {
+                    text-shadow: 2px 2px 1px var(--dark-color);
+                }
+            }
+        }
+
+        .buy-course {
             display: flex;
             justify-content: center;
-            align-items: center;
-            color: #FFF;
-          }
+            padding: 15px;
 
-          .info-content {
-            color: #FFF;
-          }
+            .buy-course-btn {
+                background: #FFF;
+                color: #222;
+            }
         }
-      }
-
-      .auth-form {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-      }
-
-      &-item {
-        display: flex;
-        flex-basis: 100%;
-      }
-
-      .modal-btn {
-        background: var(--light-color);
-        color: var(--dark-color);
-        align-self: center;
-
-        margin-top: 10px;
-      }
-
-      .modal-text {
-        margin: 10px 0;
-        color: var(--light-color);
-      }
-
-      .modal-link {
-        color: var(--light-color);
-        padding-bottom: 2.5008px;
-        border-bottom: 2px solid #FFF;
-        width: fit-content;
-        align-self: center;
-        transition: .2s;
-
-        &:hover {
-          text-shadow: 2px 2px 1px var(--dark-color);
-        }
-      }
     }
-  }
 }
 
 .input-wrap {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 
-  .input-title {
+    .input-title {
+        transform: translate(20px, 40px);
+        transition: 0.2s;
+        background: var(--light-color);
+        border-radius: 10px 10px 0 0;
+        padding: 10px 20px 10px;
+        align-self: flex-start;
+        z-index: 1;
 
-    transform: translate(20px, 40px);
-    transition: .2s;
-    background: var(--light-color);
-    border-radius: 10px 10px 0 0;
-    padding: 10px 20px 10px;
-    align-self: flex-start;
-    z-index: 1;
-
-    &.show {
-      transform: translate(20px, 10px);
+        &.show {
+            transform: translate(20px, 10px);
+        }
     }
-  }
 
+    .input {
+        padding: 14px 25px;
+        border: none;
+        background: var(--light-color);
+        outline: none;
+        border-radius: 24px;
+        font-size: 18px;
+        color: var(--dark-color);
+        z-index: 2;
 
-  .input {
-    padding: 14px 25px;
-    border: none;
-    background: var(--light-color);
-    outline: none;
-    border-radius: 24px;
-    font-size: 18px;
-    color: var(--dark-color);
-    z-index: 2  ;
-
-    &::placeholder {
-      font-weight: 500;
-      font-size: 1.125rem;
-      line-height: 21px;
-      color: var(--input-pl-color);
+        &::placeholder {
+            font-weight: 500;
+            font-size: 1.125rem;
+            line-height: 21px;
+            color: var(--input-pl-color);
+        }
     }
-  }
 }
 
 .closebtn {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 
 .btn-arrow {
-  display: inline-flex;
-  align-self: center;
-  background: var(--base-gradient);
-  border-radius: 50%;
-  padding: 13px;
-  transition: .3s;
+    display: inline-flex;
+    align-self: center;
+    background: var(--base-gradient);
+    border-radius: 50%;
+    padding: 13px;
+    transition: 0.3s;
 
-  border: unset;
-  color: var(--light-color);
+    border: unset;
+    color: var(--light-color);
 
-  &:hover {
-    filter: brightness(0.5);
-    cursor: pointer;
-  }
+    &:hover {
+        filter: brightness(0.5);
+        cursor: pointer;
+    }
 
-  &:active {
-    transform: scale(1.2);
-  }
+    &:active {
+        transform: scale(1.2);
+    }
 }
 
 .hide {
-  display: none !important;
-  opacity: 0;
+    display: none !important;
+    opacity: 0;
 }
 
 .top-btn {
-  position: fixed;
-  right: 50px;
-  bottom: -50px;
-  transition: .3s;
-  background: var(--base-gradient);
-  box-shadow: 0px 0 12px 0px #f00;
-  opacity: 0;
-  font-size: 25px;
-  padding: 10px 12px;
-  color: #FFF;
-  border-radius: 50%;
+    position: fixed;
+    right: 5%;
+    bottom: -50px;
+    transition: 0.3s;
+    background: var(--base-gradient);
+    box-shadow: 0px 0 12px 0px #f00;
+    opacity: 0;
+    font-size: 25px;
+    padding: 10px 12px;
+    color: #fff;
+    border-radius: 50%;
 
-  
-
-  &.active {
-    opacity: 1;
-    bottom: 50px;
-  }
+    &.active {
+        opacity: 1;
+        bottom: 50px;
+    }
 }
 
+
+.modalBtn {
+    color: #FFF;
+    background: unset;
+    border: unset;
+    text-decoration: underline;
+    font-size: 18px;
+    cursor: pointer;
+}
