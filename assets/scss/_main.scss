@@ -325,6 +325,10 @@
   @include _768px {
     margin-top: 1500px;
   }
+
+  @include _320px {
+    margin-top: 1850px !important;
+  }
 }
 
 .teacher-block {

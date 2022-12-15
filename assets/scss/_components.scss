@@ -19,6 +19,9 @@
     visibility: visible;
   }
 
+
+
+
   .modal {
     max-width: 600px;
     width: 500px;
@@ -30,6 +33,11 @@
     transition: .2s;
     will-change: transform;
     overflow-y: auto;
+
+    img {
+      max-width: 100%;
+      max-height:  300px;
+    }
 
     &.active {
       transform: scale(1);
@@ -67,6 +75,18 @@
     .modal-content {
       max-height: 70vh;
       overflow-y: auto;
+      padding-right: 15px;
+
+      &::-webkit-scrollbar {
+        width: 5px;
+        background: #333;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        width: 5px;
+        background: var(--light-color);
+      }
+
       .modal-logo {
         color: var(--light-color);
         margin: 10px 0;
@@ -74,14 +94,21 @@
 
       .course-info {
         display: flex;
+        gap: 15px;
 
         .info-item {
           display: flex;
+          gap: 10px;
 
-          .info-image {
+          .info-icon {
             display: flex;
             justify-content: center;
             align-items: center;
+            color: #FFF;
+          }
+
+          .info-content {
+            color: #FFF;
           }
         }
       }
@@ -134,6 +161,7 @@
   position: relative;
 
   .input-title {
+
     transform: translate(20px, 40px);
     transition: .2s;
     background: var(--light-color);
