@@ -372,7 +372,8 @@
 }
 .modalbox .modal .modal-content .course-info {
   display: flex;
-  gap: 15px;
+  justify-content: center;
+  gap: 20px;
 }
 .modalbox .modal .modal-content .course-info .info-item {
   display: flex;
@@ -389,6 +390,9 @@
 }
 .modalbox .modal .modal-content .course-info .info-item .info-content {
   color: #333;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 100%;
 }
 @media (max-width: 530px) {
   .modalbox .modal .modal-content .course-info {
@@ -434,7 +438,7 @@
   padding: 15px;
 }
 .modalbox .modal .buy-course .buy-course-btn {
-  background: #FFF;
+  background: #fff;
   color: #222;
 }
 
@@ -519,7 +523,7 @@
 }
 
 .modalBtn {
-  color: #FFF;
+  color: #fff;
   background: unset;
   border: unset;
   text-decoration: underline;

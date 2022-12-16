@@ -97,7 +97,8 @@
 
             .course-info {
                 display: flex;
-                gap: 15px;
+                justify-content: center;
+                gap: 20px;
 
                 .info-item {
                     display: flex;
@@ -115,6 +116,9 @@
 
                     .info-content {
                         color: #333;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-basis: 100%;
                     }
                 }
 
@@ -170,7 +174,7 @@
             padding: 15px;
 
             .buy-course-btn {
-                background: #FFF;
+                background: #fff;
                 color: #222;
             }
         }
@@ -265,9 +269,8 @@
     }
 }
 
-
 .modalBtn {
-    color: #FFF;
+    color: #fff;
     background: unset;
     border: unset;
     text-decoration: underline;
